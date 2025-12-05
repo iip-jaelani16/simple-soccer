@@ -36,19 +36,19 @@ func _ready():
 
 func _on_cell_clicked(pos: Vector2):
 	print("Grid terima klik dari cell di: ", pos)
-	grid_clicked.emit(pos)  # kirim ke luar (Main/Game)
+	grid_clicked.emit(pos)  
 	
 	
 func resize_to_screen():
 	var screen_width = get_viewport().size.x
 	
 	var total_grid_width = columns * cell_size.x
-	# Scale yang diperlukan supaya full lebar layar
+	
 	var scale_factor = screen_width / total_grid_width
 	scale = Vector2(scale_factor, scale_factor)
 
-	# Opsional: posisikan grid di tengah layar (horisontal)
+	
 	var new_width = total_grid_width * scale_factor
 	position.x = (screen_width - new_width) * 0.5
 
-	# NOTE: posisi Y terserah kamu (manual)
+	
