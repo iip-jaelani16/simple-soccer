@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ka1crwy1fjuy"]
+
+[ext_resource type="Script" uid="uid://bgayqajw5y0k1" path="res://game_node.gd" id="1_cm0pq"]
+[ext_resource type="Script" uid="uid://b66jw2x1cm81g" path="res://grid.gd" id="1_glv2v"]
+[ext_resource type="PackedScene" uid="uid://dlt0m451fjq5o" path="res://cell.tscn" id="2_uu6xs"]
+[ext_resource type="PackedScene" uid="uid://bciskirjbi7g3" path="res://ball_b.tscn" id="4_cm0pq"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 952.0
+grow_horizontal = 2
+
+[node name="GameNode" type="Node2D" parent="Panel"]
+script = ExtResource("1_cm0pq")
+
+[node name="Grid" type="Node2D" parent="Panel/GameNode"]
+script = ExtResource("1_glv2v")
+cell_scene = ExtResource("2_uu6xs")
+
+[node name="Ball" parent="Panel/GameNode" instance=ExtResource("4_cm0pq")]
+position = Vector2(347, 653)

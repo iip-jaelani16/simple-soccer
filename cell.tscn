@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlt0m451fjq5o"]
+
+[ext_resource type="Script" uid="uid://clnd2nw67uk0b" path="res://cell.gd" id="1_gwrgs"]
+[ext_resource type="Texture2D" uid="uid://dyq6875decunl" path="res://game-frame.png" id="1_yh0nt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yh0nt"]
+size = Vector2(60, 60)
+
+[node name="Cell" type="Area2D"]
+script = ExtResource("1_gwrgs")
+region_normal = Rect2(150, 9, 60, 60)
+region_hit = Rect2(78, 9, 60, 60)
+region_caught = Rect2(9, 9, 60, 60)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yh0nt")
+region_enabled = true
+region_rect = Rect2(150, 9, 60, 60)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yh0nt")

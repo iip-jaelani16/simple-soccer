@@ -1,0 +1,379 @@
+[gd_scene load_steps=8 format=3 uid="uid://bhsd48wnyqaxx"]
+
+[ext_resource type="PackedScene" uid="uid://dlt0m451fjq5o" path="res://cell.tscn" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://c5ss6twbi5p1e" path="res://node_2d.gd" id="1_epypp"]
+[ext_resource type="PackedScene" uid="uid://bciskirjbi7g3" path="res://ball_b.tscn" id="2_epypp"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_epypp"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0hol4"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_q6r6c"]
+distance = -1128.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kdubu"]
+normal = Vector2(-0.999983, -0.005830805)
+distance = -719.0111
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_epypp")
+
+[node name="Cell" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(38, 187)
+
+[node name="Cell2" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(108, 187)
+
+[node name="Cell8" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(179, 187)
+
+[node name="Cell9" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(251, 187)
+
+[node name="Cell17" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(467, 187)
+
+[node name="Cell18" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(538, 187)
+
+[node name="Cell19" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(610, 187)
+
+[node name="Cell20" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(685, 187)
+
+[node name="Cell3" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(108, 114)
+
+[node name="Cell5" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(179, 114)
+
+[node name="Cell6" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(251, 114)
+
+[node name="Cell7" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(326, 114)
+
+[node name="Cell4" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(38, 114)
+
+[node name="Cell11" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(467, 114)
+
+[node name="Cell12" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(538, 114)
+
+[node name="Cell13" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(610, 114)
+
+[node name="Cell14" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(685, 114)
+
+[node name="Cell15" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(397, 114)
+
+[node name="Cell21" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(38, 333)
+
+[node name="Cell22" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(108, 333)
+
+[node name="Cell29" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(610, 333)
+
+[node name="Cell30" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(685, 333)
+
+[node name="Cell31" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(108, 260)
+
+[node name="Cell32" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(179, 260)
+
+[node name="Cell35" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(38, 260)
+
+[node name="Cell37" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(538, 260)
+
+[node name="Cell38" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(610, 260)
+
+[node name="Cell39" parent="." instance=ExtResource("1_0e48y")]
+position = Vector2(685, 260)
+
+[node name="Ball" parent="." instance=ExtResource("2_epypp")]
+position = Vector2(356, 821)
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="Dinding" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Dinding"]
+position = Vector2(232, 0)
+shape = SubResource("WorldBoundaryShape2D_epypp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D"]
+position = Vector2(0, 114)
+shape = SubResource("WorldBoundaryShape2D_0hol4")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D2"]
+position = Vector2(0, -238)
+shape = SubResource("WorldBoundaryShape2D_q6r6c")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D3"]
+shape = SubResource("WorldBoundaryShape2D_kdubu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -369.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="LbInfo" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 12.0
+offset_right = 51.0
+offset_bottom = 35.0
+size_flags_horizontal = 3
+text = "Target : 0/0"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Level" type="Panel" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Panel/VBoxContainer/Level"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel/VBoxContainer/Level/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/VBoxContainer/Level/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "DIFFICULTY"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Panel/VBoxContainer/Level/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 4
+
+[node name="BtnEasy" type="Button" parent="CanvasLayer/Panel/VBoxContainer/Level/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "EASY"
+
+[node name="BtnNormal" type="Button" parent="CanvasLayer/Panel/VBoxContainer/Level/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "NORMAL"
+
+[node name="BtnHard" type="Button" parent="CanvasLayer/Panel/VBoxContainer/Level/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "HARD"
+
+[node name="BtnExtreme" type="Button" parent="CanvasLayer/Panel/VBoxContainer/Level/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "EXTREME"
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Panel/VBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel/VBoxContainer/Panel2/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Panel/VBoxContainer/Panel2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 3
+
+[node name="LbBalance" type="Label" parent="CanvasLayer/Panel/VBoxContainer/Panel2/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "BALANCE
+$12000"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel/VBoxContainer/Panel2/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="LbBet" type="Label" parent="CanvasLayer/Panel/VBoxContainer/Panel2/MarginContainer/VBoxContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "$0.12"
+horizontal_alignment = 1
+
+[node name="LbWin" type="Label" parent="CanvasLayer/Panel/VBoxContainer/Panel2/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "WIN
+-"
+horizontal_alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Panel/VBoxContainer/Panel2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="Minus" type="Button" parent="CanvasLayer/Panel/VBoxContainer/Panel2/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-"
+
+[node name="Bet" type="Button" parent="CanvasLayer/Panel/VBoxContainer/Panel2/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+text = "BET NOW"
+
+[node name="Plus" type="Button" parent="CanvasLayer/Panel/VBoxContainer/Panel2/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+"
+
+[node name="Panel3" type="Panel" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LbNotif" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.5
+offset_top = -27.5
+offset_right = 149.5
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "KLIK BET DULU!"
+
+[node name="PopupHasil" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PopupHasil"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0.047058824, 0.827451)
+
+[node name="Panel" type="Panel" parent="CanvasLayer/PopupHasil/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -271.5
+offset_top = -133.75
+offset_right = 271.5
+offset_bottom = 133.75
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PopupHasil/ColorRect/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PopupHasil/ColorRect/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="LbTitle" type="Label" parent="CanvasLayer/PopupHasil/ColorRect/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "YOU WIN"
+horizontal_alignment = 1
+
+[node name="LbAmount" type="Label" parent="CanvasLayer/PopupHasil/ColorRect/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "AMOUNT
+$12000"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/PopupHasil/ColorRect/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "PLAY AGAIN"
+
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Level/MarginContainer/VBoxContainer/GridContainer/BtnEasy" to="." method="_on_btn_easy_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Level/MarginContainer/VBoxContainer/GridContainer/BtnNormal" to="." method="_on_btn_normal_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Level/MarginContainer/VBoxContainer/GridContainer/BtnHard" to="." method="_on_btn_hard_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Level/MarginContainer/VBoxContainer/GridContainer/BtnExtreme" to="." method="_on_btn_extreme_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Panel2/MarginContainer/VBoxContainer/HBoxContainer/Minus" to="." method="_on_btn_min_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Panel2/MarginContainer/VBoxContainer/HBoxContainer/Bet" to="." method="_on_btn_main_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Panel2/MarginContainer/VBoxContainer/HBoxContainer/Plus" to="." method="_on_btn_plus_pressed"]
+[connection signal="pressed" from="CanvasLayer/PopupHasil/ColorRect/Panel/MarginContainer/VBoxContainer/Button" to="." method="_on_btn_close_result_pressed"]

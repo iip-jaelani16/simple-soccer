@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://bndeu8ewfv3ce"]
+
+[ext_resource type="AudioStream" uid="uid://bcw3xih5cmpmw" path="res://bgm.mp3" id="1_l2k84"]
+[ext_resource type="Script" uid="uid://dapyxifx2yg3" path="res://audio_manager.gd" id="1_l55mp"]
+[ext_resource type="AudioStream" uid="uid://b6wblv2atf0ke" path="res://click.mp3" id="2_l55mp"]
+[ext_resource type="AudioStream" uid="uid://dae4ga6bm0a4w" path="res://kick.mp3" id="3_v0gdi"]
+[ext_resource type="AudioStream" uid="uid://dwaqq321l7fh3" path="res://hit.mp3" id="4_7fh0q"]
+[ext_resource type="AudioStream" uid="uid://c2ykny134rrji" path="res://explode.mp3" id="6_l55mp"]
+[ext_resource type="AudioStream" uid="uid://d4iwa1nmhj6d1" path="res://win.mp3" id="6_wby2p"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_l55mp")
+
+[node name="AudioBGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_l2k84")
+autoplay = true
+parameters/looping = true
+
+[node name="AudioClickSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_l55mp")
+
+[node name="AudioShoot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_v0gdi")
+
+[node name="AudioHit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_7fh0q")
+
+[node name="AudioExplode" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_l55mp")
+
+[node name="AudioWin" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_wby2p")

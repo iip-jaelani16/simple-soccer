@@ -1,0 +1,342 @@
+[gd_scene load_steps=4 format=3 uid="uid://d31xn6xkbheh3"]
+
+[ext_resource type="Texture2D" uid="uid://dyq6875decunl" path="res://game-frame.png" id="1_tt30a"]
+[ext_resource type="PackedScene" uid="uid://bibaxuomj4fri" path="res://ball.tscn" id="2_1ey7h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ey7h"]
+texture = ExtResource("1_tt30a")
+region_rect = Rect2(150, 9, 60, 60)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Game" type="Panel" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Game"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="VBoxContainer/Game/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel2" type="Panel" parent="VBoxContainer/Game/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.42
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Game/VBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel2" type="Panel" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.99
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = 2.0
+offset_bottom = -287.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 7
+
+[node name="Button" type="Button" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ey7h")
+
+[node name="Button2" type="Button" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ey7h")
+
+[node name="Button3" type="Button" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ey7h")
+
+[node name="Button4" type="Button" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ey7h")
+
+[node name="Button5" type="Button" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ey7h")
+
+[node name="Button6" type="Button" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ey7h")
+
+[node name="Button7" type="Button" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ey7h")
+
+[node name="Button8" type="Button" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ey7h")
+
+[node name="Button9" type="Button" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ey7h")
+
+[node name="Button10" type="Button" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ey7h")
+
+[node name="Control" type="Control" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Button11" type="Button" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ey7h")
+
+[node name="Button12" type="Button" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ey7h")
+
+[node name="Button13" type="Button" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ey7h")
+
+[node name="Button14" type="Button" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ey7h")
+
+[node name="Button15" type="Button" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ey7h")
+
+[node name="Control2" type="Control" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Control4" type="Control" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Button16" type="Button" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ey7h")
+
+[node name="Button17" type="Button" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ey7h")
+
+[node name="Button18" type="Button" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ey7h")
+
+[node name="Control5" type="Control" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Control6" type="Control" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Control7" type="Control" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Control8" type="Control" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Control9" type="Control" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Button19" type="Button" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ey7h")
+
+[node name="Area2D" type="Area2D" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer/Panel2/GridContainer"]
+
+[node name="Ball" parent="VBoxContainer/Game/VBoxContainer/Panel2/VBoxContainer" instance=ExtResource("2_1ey7h")]
+position = Vector2(355, 576)
+
+[node name="Panel" type="Panel" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="TopContainer" type="HBoxContainer" parent="VBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="EASY" type="Button" parent="VBoxContainer/Panel/VBoxContainer/TopContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "EASY"
+
+[node name="MEDIUM" type="Button" parent="VBoxContainer/Panel/VBoxContainer/TopContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "MEDIUM"
+
+[node name="HARD" type="Button" parent="VBoxContainer/Panel/VBoxContainer/TopContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "HARD"
+
+[node name="EXTREME" type="Button" parent="VBoxContainer/Panel/VBoxContainer/TopContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "EXTREME"
+
+[node name="CenterContainer" type="HBoxContainer" parent="VBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.5
+theme_override_constants/separation = 10
+
+[node name="Panel2" type="Panel" parent="VBoxContainer/Panel/VBoxContainer/CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panel/VBoxContainer/CenterContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panel/VBoxContainer/CenterContainer/Panel2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel/VBoxContainer/CenterContainer/Panel2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "BALANCE"
+
+[node name="Label3" type="Label" parent="VBoxContainer/Panel/VBoxContainer/CenterContainer/Panel2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "$10"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer/Panel/VBoxContainer/CenterContainer/Panel2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "WIN"
+horizontal_alignment = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Panel/VBoxContainer/CenterContainer/Panel2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="VBoxContainer/Panel/VBoxContainer/CenterContainer/Panel2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "MINUS"
+
+[node name="Button2" type="Button" parent="VBoxContainer/Panel/VBoxContainer/CenterContainer/Panel2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "BET"
+
+[node name="Button3" type="Button" parent="VBoxContainer/Panel/VBoxContainer/CenterContainer/Panel2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "PLUS"
+
+[node name="BottomContainer" type="HBoxContainer" parent="VBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="SETTING" type="Button" parent="VBoxContainer/Panel/VBoxContainer/BottomContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SETTING"
+
+[node name="SOUND" type="Button" parent="VBoxContainer/Panel/VBoxContainer/BottomContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SOUND"
+
+[node name="BET" type="Button" parent="VBoxContainer/Panel/VBoxContainer/BottomContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "BET"
